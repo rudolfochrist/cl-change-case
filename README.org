@@ -1,0 +1,21 @@
+#+STARTUP: showall
+
+* NAME
+
+cl-change-case - Convert strings between camelCase, param-case, PascalCase and more
+
+* SYNOPSIS
+
+* DESCRIPTION
+
+** FUNCTIONS
+
+* AUTHOR
+
+* COPYRIGHT
+
+Copyright (c) 2016 Sebastian Christ (rudolfo.christ@gmail.com)
+
+Released under the LLGPL license.
+
+* SEE ALSO
