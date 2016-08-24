@@ -18,7 +18,9 @@
    #:no-case
    #:camel-case
    #:dot-case
-   #:header-case))
+   #:header-case
+   #:param-case
+   #:pascal-case))
 
 (in-package :cl-change-case)
 
@@ -142,3 +144,16 @@ unless MERGE-NUMBERS is non-nil."
                          (upper-case match))
                        :simple-calls t)))
 
+
+;;; param case
+
+(defun param-case (string)
+  "Transform STRING to param-case"
+  (no-case string :replacement "-"))
+
+
+;;; pascal case
+
+(defun pascal-case (string)
+  "Transform STRING to PascalCase"
+  (upper-case-first (camel-case string)))
