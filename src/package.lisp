@@ -10,5 +10,6 @@
    #:lower-case
    #:lower-case-first
    #:string-lower-case-p
-   #:upper-case))
+   #:upper-case
+   #:upper-case-first))
 
