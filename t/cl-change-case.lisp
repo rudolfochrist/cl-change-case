@@ -27,6 +27,7 @@
 
 (test string-lower-case-p
   (is (not (null (string-lower-case-p "test"))))
+  (is (not (null (string-lower-case-p "test string!"))))
   (is (null (string-lower-case-p "Test")))
   (is (null (string-lower-case-p "TEST"))))
 
@@ -46,6 +47,7 @@
 
 (test string-upper-case-p
   (is (not (null (string-upper-case-p "TEST"))))
+  (is (not (null (string-upper-case-p "TEST STRING!"))))
   (is (null (string-upper-case-p "test")))
   (is (null (string-upper-case-p "Test"))))
 

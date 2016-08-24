@@ -52,7 +52,13 @@
 
 (defun string-lower-case-p (string)
   "Tests if each character in STRING has lower case."
-  (every #'identity (map 'list #'lower-case-p string)))
+  (every #'identity (map 'list
+                         (lambda (char)
+                           (if (alpha-char-p char)
+                               (lower-case-p char)
+                               ;; non-alphanumeric chars considered lower case.
+                               t))
+                         string)))
 
 
 ;;; upper case
@@ -74,7 +80,13 @@
 
 (defun string-upper-case-p (string)
   "Test if each character in STRING has upper case."
-  (every #'identity (map 'list #'upper-case-p string)))
+  (every #'identity (map 'list
+                         (lambda (char)
+                           (if (alpha-char-p char)
+                               (upper-case-p char)
+                               ;; non-alphanumeric chars considered upper case.
+                               t))
+                         string)))
 
 
 ;;; no case
