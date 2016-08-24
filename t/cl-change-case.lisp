@@ -176,3 +176,32 @@
   (is-string (header-case "TestString") "Test-String")
   (is-string (header-case "TestString1_2_3") "Test-String1-2-3")
   (is-string (header-case "TestString_1_2_3") "Test-String-1-2-3"))
+
+
+;;; swap case tests
+
+(test swap-case
+  (is-string (swap-case "test") "TEST")
+  (is-string (swap-case "TEST") "test")
+  (is-string (swap-case "PascalCase") "pASCALcASE"))
+
+
+;;; title case tests
+
+(test title-case
+  ;; single words
+  (is-string (title-case "test") "Test")
+  (is-string (title-case "TEST") "Test")
+
+  ;; no cased strings
+  (is-string (title-case "test string") "Test String")
+  (is-string (title-case "Test String") "Test String")
+
+  ;; strings with non-alphanumeric chars
+  (is-string (title-case "dot.case") "Dot Case")
+  (is-string (title-case "path/case") "Path Case")
+
+  ;; various
+  (is-string (title-case "TestString") "Test String")
+  (is-string (title-case "TestString1_2_3") "Test String1 2 3")
+  (is-string (title-case "TestString_1_2_3") "Test String 1 2 3"))

@@ -22,7 +22,11 @@
    #:param-case
    #:pascal-case
    #:path-case
-   #:sentence-case))
+   #:sentence-case
+   #:snake-case
+   #:swap-case
+   #:title-case
+   #:constant-case))
 
 (in-package :cl-change-case)
 
@@ -174,4 +178,40 @@ unless MERGE-NUMBERS is non-nil."
   "Transform STRING to Sentence case"
   (upper-case-first (no-case string)))
 
+
+;;; snake case 
 
+(defun snake-case (string)
+  "Transform STRING to snake_case"
+  (no-case string :replacement "_"))
+
+
+;;; swap case
+
+(defun swap-case (string)
+  "Reverse case for each character in STRING."
+  (map 'string (lambda (char)
+                 (if (upper-case-p char)
+                     (char-downcase char)
+                     (char-upcase char)))
+       string))
+
+
+;;; title case
+
+(defun title-case (string)
+  "Transform STRING to Title Case"
+  (let ((no-case (no-case string)))
+    (regex-replace-all "^.| ."
+                       no-case
+                       (lambda (match &rest registers)
+                         (declare (ignore registers))
+                         (upper-case match))
+                       :simple-calls t)))
+
+
+;;; constant case
+
+(defun constant-case (string)
+  "Transform STRING to CONSTANT_CASE."
+  (upper-case (snake-case string)))
