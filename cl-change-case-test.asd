@@ -11,6 +11,7 @@
                :cl-change-case)
   :components ((:module "t"
                 :components ((:file "package")
+                             (:file "test-utils")
                              (:file "lower-case")
                              (:file "upper-case")
                              (:file "no-case")

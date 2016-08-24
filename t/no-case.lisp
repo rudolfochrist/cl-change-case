@@ -56,8 +56,7 @@
 
 (test no-case
   (loop for (input expected) in *no-case-tests*
-        do (is (string= (no-case input) expected)))
+        do (is-string (no-case input) expected))
   ;; test with custom replacement character
-  (is (string= (no-case "HELLO WORLD!" :replacement "_")
-               "hello_world")))
+  (is-string (no-case "HELLO WORLD!" :replacement "_") "hello_world"))
 
