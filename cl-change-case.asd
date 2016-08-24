@@ -10,10 +10,12 @@
   :source-control (:git "git@github.com:rudolfochrist/cl-change-case.git")
   :bug-tracker "https://github.com/rudolfochrist/cl-change-case/issues"
   :depends-on (:alexandria
-               :cl-ppcre)
+               :cl-ppcre
+               :cl-ppcre-unicode)
   :components ((:module "src"
                 :components ((:file "package")
                              (:file "lower-case")
-                             (:file "upper-case"))))
+                             (:file "upper-case")
+                             (:file "no-case"))))
   :description "Convert strings between camelCase, param-case, PascalCase and more"
   :in-order-to ((test-op (test-op :cl-change-case-test))))

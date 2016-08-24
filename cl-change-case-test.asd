@@ -12,7 +12,8 @@
   :components ((:module "t"
                 :components ((:file "package")
                              (:file "lower-case")
-                             (:file "upper-case"))))
+                             (:file "upper-case")
+                             (:file "no-case"))))
   :perform (test-op (op c)
                     (asdf:clear-system c)
                     (uiop:symbol-call :5am :run!)))
