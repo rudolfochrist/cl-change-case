@@ -11,5 +11,6 @@
    #:lower-case-first
    #:string-lower-case-p
    #:upper-case
-   #:upper-case-first))
+   #:upper-case-first
+   #:string-upper-case-p))
 

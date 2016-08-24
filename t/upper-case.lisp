@@ -13,3 +13,8 @@
   (is (string= (upper-case-first nil) ""))
   (is (string= (upper-case-first "test") "Test"))
   (is (string= (upper-case-first "TEST") "TEST")))
+
+(test string-upper-case-p
+  (is (not (null (string-upper-case-p "TEST"))))
+  (is (null (string-upper-case-p "test")))
+  (is (null (string-upper-case-p "Test"))))

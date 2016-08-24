@@ -16,3 +16,7 @@
         (setf (char copy 0)
               (char-upcase (char copy 0)))
         copy)))
+
+(defun string-upper-case-p (string)
+  "Test if each character in STRING has upper case."
+  (every #'identity (map 'list #'upper-case-p string)))
