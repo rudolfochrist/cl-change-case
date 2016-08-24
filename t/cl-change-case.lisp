@@ -134,3 +134,45 @@
 
   ;; smash numbers if wished
   (is-string (camel-case "test 1 2 3" :merge-numbers t) "test123"))
+
+
+;;; dot case tests
+
+(test dot-case
+  ;; single words
+  (is-string (dot-case "test") "test")
+  (is-string (dot-case "TEST") "test")
+
+  ;; no cased strings
+  (is-string (dot-case "test string") "test.string")
+  (is-string (dot-case "Test String") "test.string")
+
+  ;; strings with non-alphanumeric chars
+  (is-string (dot-case "dot.case") "dot.case")
+  (is-string (dot-case "path/case") "path.case")
+
+  ;; various
+  (is-string (dot-case "TestString") "test.string")
+  (is-string (dot-case "TestString1_2_3") "test.string1.2.3")
+  (is-string (dot-case "TestString_1_2_3") "test.string.1.2.3"))
+
+
+;;; header case tests
+
+(test header-case
+  ;; single words
+  (is-string (header-case "test") "Test")
+  (is-string (header-case "TEST") "Test")
+
+  ;; no cased strings
+  (is-string (header-case "test string") "Test-String")
+  (is-string (header-case "Test String") "Test-String")
+
+  ;; strings with non-alphanumeric chars
+  (is-string (header-case "dot.case") "Dot-Case")
+  (is-string (header-case "path/case") "Path-Case")
+
+  ;; various
+  (is-string (header-case "TestString") "Test-String")
+  (is-string (header-case "TestString1_2_3") "Test-String1-2-3")
+  (is-string (header-case "TestString_1_2_3") "Test-String-1-2-3"))

@@ -16,7 +16,9 @@
    #:upper-case-first
    #:string-upper-case-p
    #:no-case
-   #:camel-case))
+   #:camel-case
+   #:dot-case
+   #:header-case))
 
 (in-package :cl-change-case)
 
@@ -119,3 +121,24 @@ unless MERGE-NUMBERS is non-nil."
                          (declare (ignore target))
                          (upper-case $1))
                        :simple-calls t)))
+
+
+;;; dot case
+
+(defun dot-case (string)
+  "Transform STRING to dot.case"
+  (no-case string :replacement "."))
+
+
+;;; header case
+
+(defun header-case (string)
+  "Transform STRING to Header-Case"
+  (let ((no-case (no-case string :replacement "-")))
+    (regex-replace-all "^.|\-."
+                       no-case
+                       (lambda (match &rest registers)
+                         (declare (ignore registers))
+                         (upper-case match))
+                       :simple-calls t)))
+
