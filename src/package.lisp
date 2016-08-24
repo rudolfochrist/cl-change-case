@@ -15,5 +15,6 @@
    #:upper-case
    #:upper-case-first
    #:string-upper-case-p
-   #:no-case))
+   #:no-case
+   #:camel-case))
 
