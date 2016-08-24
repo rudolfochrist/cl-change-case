@@ -7,5 +7,7 @@
   (:import-from :alexandria
                 #:define-constant)
   (:export
-   #:lower-case))
+   #:lower-case
+   #:lower-case-first
+   #:string-lower-case-p))
 
