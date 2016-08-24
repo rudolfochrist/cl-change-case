@@ -9,5 +9,6 @@
   (:export
    #:lower-case
    #:lower-case-first
-   #:string-lower-case-p))
+   #:string-lower-case-p
+   #:upper-case))
 

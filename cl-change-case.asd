@@ -13,6 +13,7 @@
                :cl-ppcre)
   :components ((:module "src"
                 :components ((:file "package")
-                             (:file "lower-case"))))
+                             (:file "lower-case")
+                             (:file "upper-case"))))
   :description "Convert strings between camelCase, param-case, PascalCase and more"
   :in-order-to ((test-op (test-op :cl-change-case-test))))
