@@ -20,7 +20,9 @@
    #:dot-case
    #:header-case
    #:param-case
-   #:pascal-case))
+   #:pascal-case
+   #:path-case
+   #:sentence-case))
 
 (in-package :cl-change-case)
 
@@ -155,5 +157,21 @@ unless MERGE-NUMBERS is non-nil."
 ;;; pascal case
 
 (defun pascal-case (string)
-  "Transform STRING to PascalCase"
+  "Transform STRING to Pascal Case"
   (upper-case-first (camel-case string)))
+
+
+;;; path case
+
+(defun path-case (string)
+  "Transform STRING to path/case"
+  (no-case string :replacement "/"))
+
+
+;;; sentence case
+
+(defun sentence-case (string)
+  "Transform STRING to Sentence case"
+  (upper-case-first (no-case string)))
+
+
