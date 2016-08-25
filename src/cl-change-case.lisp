@@ -156,12 +156,13 @@ unless MERGE-NUMBERS is non-nil."
 (defun header-case (string)
   "Transform STRING to Header-Case"
   (let ((no-case (no-case string :replacement "-")))
-    (regex-replace-all "^.|\-."
-                       no-case
-                       (lambda (match &rest registers)
-                         (declare (ignore registers))
-                         (upper-case match))
-                       :simple-calls t)))
+    (values
+     (regex-replace-all "^.|\-."
+                        no-case
+                        (lambda (match &rest registers)
+                          (declare (ignore registers))
+                          (upper-case match))
+                        :simple-calls t))))
 
 
 ;;; param case
@@ -215,12 +216,13 @@ unless MERGE-NUMBERS is non-nil."
 (defun title-case (string)
   "Transform STRING to Title Case"
   (let ((no-case (no-case string)))
-    (regex-replace-all "^.| ."
-                       no-case
-                       (lambda (match &rest registers)
-                         (declare (ignore registers))
-                         (upper-case match))
-                       :simple-calls t)))
+    (values
+     (regex-replace-all "^.| ."
+                        no-case
+                        (lambda (match &rest registers)
+                          (declare (ignore registers))
+                          (upper-case match))
+                        :simple-calls t))))
 
 
 ;;; constant case
