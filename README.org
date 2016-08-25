@@ -7,8 +7,8 @@ cl-change-case --- Convert strings between camelCase, param-case, PascalCase and
 
 * VERSION
 
-#+BEGIN_SRC lisp :exports results :results output
-(format t "Version ~A" (asdf:component-version (asdf:find-system :cl-change-case)))
+#+BEGIN_SRC lisp :exports results 
+(format nil "Version ~A" (asdf:component-version (asdf:find-system :cl-change-case)))
 #+END_SRC
 
 #+RESULTS:
@@ -31,6 +31,11 @@ cl-change-case --- Convert strings between camelCase, param-case, PascalCase and
 : "TestString"
 
 * DESCRIPTION
+
+=cl-change-case= is library to convert strings between =camelCase=, =PascalCase=, =snake_case=, =param-case=,
+=CONSTANT_CASE= and more. 
+
+This is a Common Lisp port of [[https://github.com/blakeembrey/change-case][blakeembrey/change-case]] released under [[https://opensource.org/licenses/MIT][The MIT License]]. 
 
 ** Functions
 :PROPERTIES:
@@ -61,7 +66,7 @@ Lower case of the first character of string.
 
 *** string-lower-case-p
 
-Test if all character in string have lower case.
+Test if all characters in string have lower case.
 
 #+BEGIN_SRC lisp
 (string-lower-case-p "test string")
@@ -105,7 +110,7 @@ Test if all characters in string have upper case.
 
 *** no-case
 
-Make string a lower case space separated string. 
+Make string a lower case, space separated string. 
 
 #+BEGIN_SRC lisp
 (no-case "test_stringTest")
