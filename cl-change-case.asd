@@ -3,7 +3,7 @@
 (in-package :asdf-user)
 
 (defsystem #:cl-change-case
-  :version "0.1"
+  :version "0.1.0"
   :author "Sebastian Christ"
   :mailto "rudolfo.christ@gmail.com"
   :license "LLGPL"
