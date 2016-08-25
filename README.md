@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/rudolfochrist/cl-change-case.svg?branch=master)](https://travis-ci.org/rudolfochrist/cl-change-case)
 
+[![Coverage Status](https://coveralls.io/repos/github/rudolfochrist/cl-change-case/badge.svg?branch=master)](https://coveralls.io/github/rudolfochrist/cl-change-case?branch=master)
+
 # NAME
 
 cl-change-case &#x2014; Convert strings between camelCase, param-case, PascalCase and more
