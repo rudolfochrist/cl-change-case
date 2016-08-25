@@ -1,7 +1,7 @@
 #+STARTUP: showall
 #+OPTIONS: toc:nil
 
-[[image:https://travis-ci.org/rudolfochrist/cl-change-case.svg?branch=master]]
+[![Build Status](https://travis-ci.org/rudolfochrist/cl-change-case.svg?branch=master)](https://travis-ci.org/rudolfochrist/cl-change-case)
 
 * NAME
 

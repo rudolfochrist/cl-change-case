@@ -1,3 +1,5 @@
+[\\![Build Status](<https://travis-ci.org/rudolfochrist/cl-change-case.svg?branch=master>)](<https://travis-ci.org/rudolfochrist/cl-change-case>)
+
 # NAME
 
 cl-change-case &#x2014; Convert strings between camelCase, param-case, PascalCase and more
