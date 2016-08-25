@@ -135,12 +135,13 @@ unless MERGE-NUMBERS is non-nil."
   (let ((nocase (if merge-numbers
                     (no-case string)
                     (regex-replace-all " (?=\\d)" (no-case string) "_"))))
-    (regex-replace-all " (.)"
-                       nocase
-                       (lambda (target $1)
-                         (declare (ignore target))
-                         (upper-case $1))
-                       :simple-calls t)))
+    (values
+     (regex-replace-all " (.)"
+                        nocase
+                        (lambda (target $1)
+                          (declare (ignore target))
+                          (upper-case $1))
+                        :simple-calls t))))
 
 
 ;;; dot case
