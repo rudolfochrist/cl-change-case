@@ -207,3 +207,14 @@
   (is-string (title-case "TestString") "Test String")
   (is-string (title-case "TestString1_2_3") "Test String1 2 3")
   (is-string (title-case "TestString_1_2_3") "Test String 1 2 3"))
+
+
+;;; other tests
+
+(test others
+  (is-string (param-case "test string") "test-string")
+  (is-string (pascal-case "test string") "TestString")
+  (is-string (path-case "test string") "test/string")
+  (is-string (sentence-case "test string") "Test string")
+  (is-string (snake-case "test string") "test_string")
+  (is-string (constant-case "test string") "TEST_STRING"))
