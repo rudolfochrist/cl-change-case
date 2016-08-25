@@ -1,6 +1,8 @@
 #+STARTUP: showall
 #+OPTIONS: toc:nil
 
+[[image:https://travis-ci.org/rudolfochrist/cl-change-case.svg?branch=master]]
+
 * NAME
 
 cl-change-case --- Convert strings between camelCase, param-case, PascalCase and more
