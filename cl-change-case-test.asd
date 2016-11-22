@@ -13,4 +13,4 @@
                 :components ((:file "cl-change-case"))))
   :perform (test-op (op c)
                     (asdf:clear-system c)
-                    (uiop:symbol-call :5am :run!)))
+                    (uiop:symbol-call :5am :run! :cl-change-case)))
