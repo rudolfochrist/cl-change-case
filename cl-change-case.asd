@@ -9,8 +9,7 @@
   :license "LLGPL"
   :source-control (:git "git@github.com:rudolfochrist/cl-change-case.git")
   :bug-tracker "https://github.com/rudolfochrist/cl-change-case/issues"
-  :depends-on (:alexandria
-               :cl-ppcre
+  :depends-on (:cl-ppcre
                :cl-ppcre-unicode)
   :components ((:module "src"
                 :components ((:file "cl-change-case"))))
