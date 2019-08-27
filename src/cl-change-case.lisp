@@ -4,8 +4,6 @@
 (defpackage #:cl-change-case
   (:nicknames :change-case)
   (:use :cl)
-  (:import-from :alexandria
-                #:define-constant)
   (:import-from :cl-ppcre
                 #:regex-replace-all)
   (:export
@@ -30,7 +28,7 @@
 
 (in-package :cl-change-case)
 
-(define-constant +empty-string+ "" :test #'string=)
+(defvar +empty-string+ "")
 
 
 ;;; lower case
