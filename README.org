@@ -12,7 +12,7 @@ cat version
 #+END_SRC
 
 #+RESULTS:
-: 0.2.0.1
+: 0.2.0
 
 * SYNOPSIS
 
