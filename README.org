@@ -1,20 +1,18 @@
 #+STARTUP: showall
 #+OPTIONS: toc:nil
 
-#+MARKDOWN: [![Build Status](https://travis-ci.org/rudolfochrist/cl-change-case.svg?branch=master)](https://travis-ci.org/rudolfochrist/cl-change-case) [![Coverage Status](https://coveralls.io/repos/github/rudolfochrist/cl-change-case/badge.svg?branch=master)](https://coveralls.io/github/rudolfochrist/cl-change-case?branch=master) [![Quicklisp](http://quickdocs.org/badge/cl-change-case.svg)](http://quickdocs.org/cl-change-case/)
-
 * NAME
 
 cl-change-case --- Convert strings between camelCase, param-case, PascalCase and more
 
 * VERSION
 
-#+BEGIN_SRC lisp :exports results 
-(format nil "Version ~A" (asdf:component-version (asdf:find-system :cl-change-case)))
+#+BEGIN_SRC sh :exports results 
+cat version
 #+END_SRC
 
 #+RESULTS:
-: Version 0.1.0
+: 0.2.0.1
 
 * SYNOPSIS
 
