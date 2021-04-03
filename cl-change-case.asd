@@ -10,7 +10,8 @@
   :depends-on ("cl-ppcre"
                "cl-ppcre-unicode")
   :components ((:module "src"
-                :components ((:file "cl-change-case"))))
+                :components ((:file "cl-change-case")))
+               (:static-file "version"))
   :description "Convert strings between camelCase, param-case, PascalCase and more"
   :in-order-to ((test-op (load-op cl-change-case/test))))
 
