@@ -16,7 +16,7 @@ cat version
 
 * SYNOPSIS
 
-#+BEGIN_SRC lisp :exports code :results output
+#+BEGIN_SRC lisp :exports both :results output
 (use-package :cl-change-case)
 
 (format t "~{~S~%~}"
@@ -46,29 +46,29 @@ This is a Common Lisp port of [[https://github.com/blakeembrey/change-case][blak
 
 Return the string in lower case.
 
-#+BEGIN_SRC lisp 
+#+BEGIN_SRC lisp :exports both
 (lower-case "TEST STRING")
 #+END_SRC
 
 #+RESULTS:
-: "test string"
+: test string
 
 *** lower-case-first
 
 Lower case of the first character of string.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (lower-case-first "TEST STRING")
 #+END_SRC
 
 #+RESULTS:
-: "tEST STRING"
+: tEST STRING
 
 *** string-lower-case-p
 
 Test if all characters in string have lower case.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (string-lower-case-p "test string")
 #+END_SRC
 
@@ -79,29 +79,29 @@ Test if all characters in string have lower case.
 
 Return the string in upper case.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (upper-case "test string")
 #+END_SRC
 
 #+RESULTS:
-: "TEST STRING"
+: TEST STRING
 
 *** upper-case-first
 
 Upper case the first character of string.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp  :exports both
 (upper-case-first "test string")
 #+END_SRC
 
 #+RESULTS:
-: "Test string"
+: Test string
 
 *** string-upper-case-p
 
 Test if all characters in string have upper case.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (string-upper-case-p "TEST STRING")
 #+END_SRC
 
@@ -112,142 +112,142 @@ Test if all characters in string have upper case.
 
 Make string a lower case, space separated string. 
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (no-case "test_stringTest")
 #+END_SRC
 
 #+RESULTS:
-: "test string test"
+: test string test
 
 Optionally you can provide a different replacement string.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (no-case "test_stringTest" :replacement "$$")
 #+END_SRC
 
 #+RESULTS:
-: "test$$string$$test"
+: test$$string$$test
 
 *** camel-case
 
 Convert string to =camelCase=.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (camel-case "test_string")
 #+END_SRC
 
 #+RESULTS:
-: "testString"
+: testString
 
 *** dot-case
 
 Convert string to =dot.case=.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (dot-case "Test String")
 #+END_SRC
 
 #+RESULTS:
-: "test.string"
+: test.string
 
 *** header-case
 
 Title case string but dash separated.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (header-case "test string")
 #+END_SRC
 
 #+RESULTS:
-: "Test-String"
+: Test-String
 
 *** param-case
 
 Convert string to =param-case=.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (param-case "test string")
 #+END_SRC
 
 #+RESULTS:
-: "test-string"
+: test-string
 
 *** pascal-case
 
 Convert string to =PascalCase=.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (pascal-case "test string")
 #+END_SRC
 
 #+RESULTS:
-: "TestString"
+: TestString
 
 *** path-case
 
 Convert string to =path/case=.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (path-case "test string more")
 #+END_SRC
 
 #+RESULTS:
-: "test/string/more"
+: test/string/more
 
 *** sentence-case
 
 Makes string a lower case, space separated string with the first word capitalized.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (sentence-case "thisIsATestString")
 #+END_SRC
 
 #+RESULTS:
-: "This is a test string"
+: This is a test string
 
 *** snake-case
 
 Convert string to =snake_case=.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (snake-case "test string")
 #+END_SRC
 
 #+RESULTS:
-: "test_string"
+: test_string
 
 *** swap-case
 
 Reverse the case of each character in string.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (swap-case "PascalCase")
 #+END_SRC
 
 #+RESULTS:
-: "pASCALcASE"
+: pASCALcASE
 
 *** title-case
 
 Make string space separated with each word capitalized.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (title-case "this_is a_test_string")
 #+END_SRC
 
 #+RESULTS:
-: "This Is A Test String"
+: This Is A Test String
 
 *** constant-case
 
 Convert string to =CONSTANT_CASE=.
 
-#+BEGIN_SRC lisp
+#+BEGIN_SRC lisp :exports both
 (constant-case "test string")
 #+END_SRC
 
 #+RESULTS:
-: "TEST_STRING"
+: TEST_STRING
 
 * AUTHOR
 
@@ -257,7 +257,7 @@ Sebastian Christ ([[mailto:rudolfo.christ@gmail.com]])
 
 Copyright (c) 2016 Sebastian Christ (rudolfo.christ@gmail.com)
 
-Released under the LLGPL license.
+Released under the MPL-2.0 license.
 
 * SEE ALSO
 
