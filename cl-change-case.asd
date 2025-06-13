@@ -4,7 +4,7 @@
   :version (:read-file-line "version")
   :author "Sebastian Christ"
   :mailto "rudolfo.christ@gmail.com"
-  :license "LLGPL"
+  :license "MPL-2.0"
   :source-control (:git "git@github.com:rudolfochrist/cl-change-case.git")
   :bug-tracker "https://github.com/rudolfochrist/cl-change-case/issues"
   :depends-on ("cl-ppcre"
@@ -20,7 +20,7 @@
   :author "Sebastian Christ"
   :mailto "rudolfo.christ@gmail.com"
   :description "Test system of cl-change-case"
-  :license "LLGPL"
+  :license "MPL-2.0"
   :depends-on ("fiveam"
                "cl-change-case")
   :components ((:module "t"
